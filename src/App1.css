@@ -1,16 +1,28 @@
-body {
+body,html {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+  }
+
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the screen */
+    z-index: -1; /* Sends the video to the background */
   }
   
   .container {
+
     display: flex;
     flex-wrap: wrap; /* Allow rows to wrap */
     justify-content: center; /* Center items horizontally */
     max-width: 60%; /* Restrict width */
     margin: 20px auto; /* Center the container with some margin */
-    gap: 20px; /* Space between cards */
+    gap: 30px; /* Space between cards */
+    position: relative;
+    z-index: 1;
   }
   
   .responsive {
@@ -26,12 +38,22 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Ensures badges stay within bounds */
     text-align: center;
-    border-radius: 8px; /* Smooth rounded edges */
+    border-radius: 12px; /* Smooth rounded edges */
+    transition: transform 0.3s ease, box-shadow 0.3s ease,filter 0.3s ease-in-out;
+  }
+
+  .gallery:hover {
+    transform: scale(1.05); /* Slight scale up */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    filter: brightness(1.1); 
   }
   
   .gallery img {
     width: 100%;
     height: auto;
+    border-bottom: 1px solid #ddd;
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.4s ease;
+
   }
   
   .badge {
@@ -44,12 +66,27 @@ body {
     font-size: 12px;
     font-weight: bold;
     border-radius: 5px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
   }
   
+  .gallery:hover .badge {
+    background-color: rgba(255, 85, 0, 0.9); /* Change badge color */
+  }
+
+
   .desc {
     padding: 15px;
     text-align: left;
+    transition: color 0.3s ease,transform 0.4s ease;
   }
+
+
+.gallery:hover .desc h3,
+.gallery:hover .desc p {
+  color: #2563eb; /* Change text color on hover */
+  transform: translateY(-5px); /* Change text color on hover */
+}
   
   .desc h3 {
     margin: 5px 0;
