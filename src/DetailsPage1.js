@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './DetailsPage.css'; // CSS file for detailed page
 import condoImage from './building1.jpg'; // Replace with your condo image
 
 function DetailsPage() {
+
+  const [showFullText, setShowFullText] = useState(false);
+
+  const legalOpinionText = `
+    Godrej Properties Limited is the absolute owner having good marketable right, 
+    title and interest on residentially converted land bearing portion of Survey 
+    No. 78/2A1 measuring 8 Guntas situated at Kodathi Village, Varthur Hobli, 
+    Bangalore East Taluk, Bangalore.
+  `;
+
   return (
     <div className="details-page-container">
       
@@ -11,7 +21,7 @@ function DetailsPage() {
         <div className="image-container">
           <img src={condoImage} alt="Condo" className="condo-image" />
           <div className="overlay-text">
-            <h1>Arina East Residences</h1>
+            <h1>Godrej Lakeside Orchard</h1>
             <p>Launching Q1 2025</p>
             <p>TOP 2027 · 107 UNITS · D15</p>
             <button className="updates-button">Receive updates</button>
@@ -62,6 +72,23 @@ function DetailsPage() {
           <li>Children's Playground</li>
         </ul>
       </div>
+
+      {/* Legal Opinion Section */}
+      <div className="legal-opinion-section">
+        <h2>Legal Opinion</h2>
+        <p className="legal-text">
+          {showFullText 
+            ? legalOpinionText 
+            : `${legalOpinionText.substring(0, 100)}...`}
+        </p>
+        <button 
+          className="read-more-button" 
+          onClick={() => setShowFullText(!showFullText)}
+        >
+          {showFullText ? 'Read Less' : 'Read More'}
+        </button>
+      </div>
+
     </div>
   );
 }
