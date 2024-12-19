@@ -67,6 +67,31 @@ function MainPage() {
             </div>
           </div>
         </div>
+        <footer class="hubspot-footer">
+          <div class="social-icons">
+            <hr class="divider" />
+            <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-medium"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-tiktok"></i></a>
+            <hr class="divider" />
+          </div>
+          <div class="footer-logo">
+            <p class="logo-text">PropTruth</p>
+            <p>&copy; 2024 PropTruth, Inc.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Legal Stuff</a> |
+            <a href="#" class="footer-link">Privacy Policy</a> |
+            <a href="#" class="footer-link">Security</a> |
+            <a href="#" class="footer-link">Website Accessibility</a> |
+            <a href="#" class="footer-link">Manage Cookies</a>
+          </div>
+        </footer>
+
       </div>
     </>
   );
