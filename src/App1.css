@@ -23,6 +23,7 @@ body,html {
     gap: 30px; /* Space between cards */
     position: relative;
     z-index: 1;
+    align-items: stretch;
   }
   
   .responsive {
@@ -40,6 +41,9 @@ body,html {
     text-align: center;
     border-radius: 12px; /* Smooth rounded edges */
     transition: transform 0.3s ease, box-shadow 0.3s ease,filter 0.3s ease-in-out;
+    flex-grow: 1; /* Ensures the card stretches to the height of the tallest sibling */
+    display: flex;
+    flex-direction: column; 
   }
 
   .gallery:hover {
@@ -54,6 +58,16 @@ body,html {
     border-bottom: 1px solid #ddd;
     transition: opacity 0.3s ease, filter 0.3s ease, transform 0.4s ease;
 
+  }
+
+  .gallery .desc {
+    padding: 15px;
+    text-align: left;
+    transition: color 0.3s ease, transform 0.4s ease;
+    flex-grow: 1; /* This will make the description container fill the remaining space */
+    display: flex;
+    flex-direction: column; /* Stack heading and text vertically */
+    justify-content: space-between; /* Keep content evenly distributed */
   }
   
   .badge {
@@ -106,3 +120,68 @@ body,html {
     }
   }
   
+  /* Footer Styling */
+
+/* Footer Styling */
+.hubspot-footer {
+  background-color: #0f242e; /* Match dark background color */
+  color: #ffffff; /* Light text for contrast */
+  width: 100%;
+  text-align: center;
+  padding: 30px 20px; /* Add spacing */
+  font-family: Arial, sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #5e717a; /* Match light border color */
+  height: 1px;
+  width: 80px;
+}
+
+.icon-link {
+  font-size: 1.2rem;
+  color: #ffffff; /* White for social icons */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #00a6ff; /* Accent hover color */
+}
+
+.footer-logo {
+  margin-bottom: 15px;
+}
+
+.footer-logo .logo-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+.footer-links {
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: #00a6ff;
+}
