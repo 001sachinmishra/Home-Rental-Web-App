@@ -1,6 +1,11 @@
 import React from 'react';
 import './DetailsPage.css'; // CSS file for detailed page
 import condoImage from './building2.jpg'; // Replace with your condo image
+import swimminglogo from './img/swimming-pool.png';
+import gymlogo from './img/gym.svg';
+import gardenlogo from './img/garden.svg';
+import securitylogo from './img/security.svg';
+import playgroundlogo from './img/tower-slide.svg';
 
 function DetailsPage() {
   return (
@@ -55,11 +60,26 @@ function DetailsPage() {
       <div className="facilities-section">
         <h2>Facilities</h2>
         <ul>
-          <li>Swimming Pool</li>
-          <li>Gym & Fitness Area</li>
-          <li>Rooftop Garden</li>
-          <li>24/7 Security</li>
-          <li>Children's Playground</li>
+        <li>
+            <img src={swimminglogo} alt="" />
+            Swimming Pool
+          </li>
+          <li>
+            <img src={gymlogo} alt="" />
+            Gym & Fitness Area
+          </li>
+          <li>
+            <img src={gardenlogo} alt="" />
+            Rooftop Garden
+          </li>
+          <li>
+            <img src={securitylogo} alt="" />
+            24/7 Security
+          </li>
+          <li>
+            <img src={playgroundlogo} alt="" />
+            Children's Playground
+          </li>
         </ul>
       </div>
     </div>

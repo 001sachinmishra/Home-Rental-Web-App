@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import './DetailsPage.css'; // CSS file for detailed page
+import swimminglogo from './img/swimming-pool.png';
+import gymlogo from './img/gym.svg';
+import gardenlogo from './img/garden.svg';
+import securitylogo from './img/security.svg';
+import playgroundlogo from './img/tower-slide.svg';
 import condoImage from './building1.jpg'; // Replace with your condo image
 
 function DetailsPage() {
@@ -15,7 +20,7 @@ function DetailsPage() {
 
   return (
     <div className="details-page-container">
-      
+
       {/* Top Section */}
       <div className="top-section">
         <div className="image-container">
@@ -65,11 +70,26 @@ function DetailsPage() {
       <div className="facilities-section">
         <h2>Facilities</h2>
         <ul>
-          <li>Swimming Pool</li>
-          <li>Gym & Fitness Area</li>
-          <li>Rooftop Garden</li>
-          <li>24/7 Security</li>
-          <li>Children's Playground</li>
+          <li>
+            <img src={swimminglogo} alt="" />
+            Swimming Pool
+          </li>
+          <li>
+            <img src={gymlogo} alt="" />
+            Gym & Fitness Area
+          </li>
+          <li>
+            <img src={gardenlogo} alt="" />
+            Rooftop Garden
+          </li>
+          <li>
+            <img src={securitylogo} alt="" />
+            24/7 Security
+          </li>
+          <li>
+            <img src={playgroundlogo} alt="" />
+            Children's Playground
+          </li>
         </ul>
       </div>
 
@@ -77,12 +97,12 @@ function DetailsPage() {
       <div className="legal-opinion-section">
         <h2>Legal Opinion</h2>
         <p className="legal-text">
-          {showFullText 
-            ? legalOpinionText 
+          {showFullText
+            ? legalOpinionText
             : `${legalOpinionText.substring(0, 100)}...`}
         </p>
-        <button 
-          className="read-more-button" 
+        <button
+          className="read-more-button"
           onClick={() => setShowFullText(!showFullText)}
         >
           {showFullText ? 'Read Less' : 'Read More'}
