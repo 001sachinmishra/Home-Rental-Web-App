@@ -67,7 +67,8 @@ function MainPage() {
             </div>
           </div>
         </div>
-        <footer class="hubspot-footer">
+      </div>
+      <footer class="hubspot-footer">
           <div class="social-icons">
             <hr class="divider" />
             <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
@@ -92,7 +93,6 @@ function MainPage() {
           </div>
         </footer>
 
-      </div>
     </>
   );
 }
