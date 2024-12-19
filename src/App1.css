@@ -31,7 +31,6 @@ html {
   /* Space between cards */
   position: relative;
   z-index: 1;
-  align-items: stretch;
 }
 
 .responsive {
